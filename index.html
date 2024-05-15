@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="calendar">
+          <div class="header">
+            <div class="month">July 2021</div>
+            <div class="btns">
+              <!-- today -->
+              <div class="btn today">
+                <i class="fas fa-calendar-day"></i>
+              </div>
+              <!-- previous month -->
+              <div class="btn prev">
+                <i class="fas fa-chevron-left"></i>
+              </div>
+              <!-- next month -->
+              <div class="btn next">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="weekdays">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+          </div>
+          <div class="days">
+            <!-- render days with js -->
+          </div>
+        </div>
+
+        <!-- to create, update, and delete a event -->
+        <!-- this for creating an event -->
+        <button class="open-button create-btn">Add Event</button>
+
+        <dialog class="modal" id="modal">
+            <form action="" class="create-event add-event">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" class="title" placeholder="enter title">
+
+                <label for="description">Description:</label>
+                <input type="text" name="description" id="description" class="description" placeholder="enter description">
+
+                <label for="time">Time:</label>
+                <input type="time" name="time" id="time" class="time">
+
+                <button class="close-button close-btn">Submit</button>
+            </form>
+
+        </dialog>
+
+        <!-- this is for updating the events -->
+        <button class="update-open-button create-btn">Update</button>
+
+        <dialog class="update-modal" id="update-modal">
+            <form action="" class="create-event add-event">
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" class="title" placeholder="enter title">
+
+                <label for="description">Description:</label>
+                <input type="text" name="description" id="description" class="description" placeholder="enter description">
+
+                <label for="time">Time:</label>
+                <input type="time" name="time" id="time" class="time">
+
+                <button class="update-close-button close-btn">Save Changes</button>
+            </form>
+
+        </dialog>
+
+
+        <!-- to display events -->
+      <div class="right">
+        <div class="today-date">
+          <div class="event-day">wed</div>
+          <div class="event-date">15 May 2024</div>
+        </div>
+
+        <div class="events">
+          <div class="event">
+            <div class="title">
+              <i class="fas fa-circle"></i>
+              <h3 class="event-title">Event 1</h3>
+            </div>
+
+            <div class="description">
+              <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+            </div>
+
+            <div class="time">
+              <div class="event-time">10:00 am - 12:00pm</div>
+            </div>
+
+            <div class="title">
+              <i class="fas fa-circle"></i>
+              <h3 class="event-title">Event 1</h3>
+            </div>
+
+            <div class="description">
+              <p class="event-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+            </div>
+
+            <div class="time">
+              <div class="event-time">10:00 am - 12:00pm</div>
+            </div>
+
+            
+          </div>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+</body>
+</html>
